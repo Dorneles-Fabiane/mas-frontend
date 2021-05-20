@@ -1,10 +1,10 @@
-import { Teste } from './pages/Teste';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
     <div className="App">
       <h1>Frontend My Activities Space</h1>
-      <Teste />
+      <GlobalStyle />
     </div>
   );
 }
