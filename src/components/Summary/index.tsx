@@ -37,5 +37,5 @@ export function Summary() {
         </strong>
       </div>
     </Container>
-  )
+  );
 }
