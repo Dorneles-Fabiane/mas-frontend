@@ -1,5 +1,4 @@
-import { Container } from "../Button/styles";
-import { Content } from "./styles";
+import { Container, Content } from "./styles";
 
 export function Header() {
   return (
