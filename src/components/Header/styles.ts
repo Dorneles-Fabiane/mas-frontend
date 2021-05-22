@@ -27,7 +27,7 @@ export const Content = styled.div`
       background: var(--greenDark);
       border: 0;
       padding: 0 2rem;
-      border-radius: 0%.25rem;
+      border-radius: 0.25rem;
       height: 3rem;
 
       transition: filter 0.2s;
