@@ -10,28 +10,29 @@ export function Summary() {
           <p>Curricular Units</p>
 
           <GoFile size={40} />
-
-          <strong>
-            25
-          </strong>
         </header>
+        
+        <strong>
+            25
+        </strong>
       </div>
       <div>
         <header>
           <p>Activities</p>
 
           <GoNote size={40} />
-
-          <strong>
-            80
-          </strong>
         </header>
+
+        <strong>
+            80
+        </strong>
       </div>
       <div className="highlight-background">
         <header>
           <p>Overall Average</p>
-        </header>
         <GoGraph size={40} />
+        </header>
+        
         <strong>
           9.4
         </strong>
