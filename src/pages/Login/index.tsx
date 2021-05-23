@@ -28,7 +28,6 @@ export function Login() {
                       type="password"
                       placeholder="Password"
                      />
-
                   </InputContainer>
 
                   <Button type="submit">Enter</Button>
