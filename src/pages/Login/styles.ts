@@ -77,7 +77,7 @@ export const InputContainer = styled.div`
   align-items: center;
 
   & + div {
-    margin-right: 10px;
+    margin-top: 10px;
   } 
 
   input {
