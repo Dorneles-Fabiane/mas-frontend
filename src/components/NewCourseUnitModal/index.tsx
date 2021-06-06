@@ -1,23 +1,29 @@
 import Modal from 'react-modal';
 import { useForm } from 'react-hook-form';
 import { FiX } from 'react-icons/fi';
+
 import { Container, Error } from './styles';
 
-interface NewCourseUnitProps {
+import api from '../../services/api';
+
+interface NewCourseUnitModalProps {
    isOpen: boolean;
    onRequestClose: () => void;
 }
 
-interface NewCourseUnitDataModal {
+interface NewCourseUnitModalData {
    name: string;
    description: string;
 }
 
-export function NewCourseUnitModal({ isOpen, onRequestClose }: NewCourseUnitProps) {
+export function NewCourseUnitModal({ isOpen, onRequestClose }: NewCourseUnitModalProps) {
 
-   const { register, handleSubmit, formState: {errors} } = useForm<NewCourseUnitDataModal>();
+   const { register, handleSubmit, formState: {errors} } = useForm<NewCourseUnitModalData>();
 
-   const onSubmit = handleSubmit(data => alert(JSON.stringify(data)));
+   const onSubmit = handleSubmit(data => api
+      .post('/courseunit', data)
+      .then(onRequestClose)
+   );
 
    return (
       <Modal 
@@ -48,6 +54,9 @@ export function NewCourseUnitModal({ isOpen, onRequestClose }: NewCourseUnitProp
                   {...register("description", {required: true})}
                />
                {errors.description && <Error>* Mandatory Field</Error>}
+               <button type="submit">
+                  Register
+               </button>
             </form>
          </Container>
       </Modal>

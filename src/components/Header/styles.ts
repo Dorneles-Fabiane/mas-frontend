@@ -39,6 +39,11 @@ export const Content = styled.div`
       & + button {
         margin-left: 10px;
       }
+
+      & + :last-child {
+        color: #fff;
+        background: transparent;
+      }
     }
   }
 `;

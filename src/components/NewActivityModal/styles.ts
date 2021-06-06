@@ -8,7 +8,7 @@ export const Container = styled.div`
     margin-bottom: 2rem;
   }
 
-  input {
+  input, select {
     width: 100%;
     padding: 0 1.5rem;
     height: 3rem;
@@ -33,7 +33,7 @@ export const Container = styled.div`
     height: 3rem;
     background: var(--green);
     color: #fff;
-    border-radius: 0.25%;
+    border-radius: 0.25rem;
     border: 0;
     font-size: 1.2rem;
     font-weight: bold;
