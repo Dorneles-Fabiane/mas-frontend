@@ -6,7 +6,7 @@ import { Summary } from "../../components/Summary";
 import { NewActivityModal } from '../../components/NewActivityModal';
 import { NewCourseUnitModal } from '../../components/NewCourseUnitModal';
 
-import { Container } from "../Dashboard/styles";
+import { Container } from "./styles";
 
 
 export function Dashboard() {
@@ -28,7 +28,7 @@ export function Dashboard() {
     setIsNewActivityModalOpen(false);
   }
   
-  function handleCourseUnitModal() {
+  function handleCloseCourseUnitModal() {
     setIsNewCourseUnitModalOpen(false);
   }
 
@@ -48,7 +48,7 @@ export function Dashboard() {
       />
       <NewCourseUnitModal 
         isOpen={isNewCourseUnitModalOpen}
-        onRequestClose={handleCourseUnitModal}
+        onRequestClose={handleCloseCourseUnitModal}
       />
     </>
   );
